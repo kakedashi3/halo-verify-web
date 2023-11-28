@@ -17,7 +17,7 @@ function LinkButton() {
   if (!keys) {
     return (
       <Button fullWidth onClick={linkHalo}>
-        ChipをScanしてね
+        ベリロンチップをスキャンしてね
       </Button>
     )
   } else if (device && registered) {
@@ -71,12 +71,12 @@ export default function Home() {
         {keys ? (
           <>
             <h1 className="text-3xl mt-6 font-expanded uppercase">
-              HaloChipが
+              ベリロンチップが
               <br />
               検出されました
             </h1>
             <p className="text-dark-gray text-sm mt-4 mb-4">
-            このチップはまだ登録されていません。下のリンクをタップしてミントHaLo.
+            このチップはまだ登録されていません。下のリンクをタップしてミントしてください。
             </p>
             <h3 className="font-normal mt-4 mb-1 text-light-gray text-xs">Device ID</h3>
             <p className="break-word font-bold text-smb">{keys?.primaryPublicKeyHash}</p>
@@ -84,12 +84,12 @@ export default function Home() {
         ) : (
           <>
             <h1 className="text-3xl mt-6 font-expanded uppercase">
-              HaloChipが
+              ベリロンチップが
               <br />
               検出されませんでした
             </h1>
             <p className="text-dark-gray text-sm mt-4 mb-4">
-            下のボタンをタップし、スマートフォンのNFTアンテナにチップをかざし、HaLo Chipをスキャンしてね。
+            下のボタンをタップし、スマートフォンのNFCアンテナにチップをかざし、ベリロンチップをスキャンしてね。
             </p>
           </>
         )}
@@ -98,7 +98,7 @@ export default function Home() {
         <CardPadding>
           {LinkButton()}
           {!connected && !registered && (
-            <p className="text-center text-xs text-light-gray uppercase mt-4">ウォレットをmint HaLo に接続</p>
+            <p className="text-center text-xs text-light-gray uppercase mt-4">ウォレットを接続してベリロンをミント</p>
           )}
         </CardPadding>
       </CardFooter>
