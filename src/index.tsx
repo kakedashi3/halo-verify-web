@@ -18,13 +18,13 @@ import Success from './pages/Success'
 const chains = [arbitrum, mainnet, polygon]
 
 // Wagmi client
-const { provider } = configureChains(chains, [walletConnectProvider({ projectId: '1d1ddeb6fc217856443baa7ad6cf5091' })])
+const { provider } = configureChains(chains, [walletConnectProvider({ projectId: '31c109acf7ef70ff25d24c9a656a1d19' })])
 
 const wagmiClient = createClient({
   autoConnect: true,
   connectors: modalConnectors({
-    projectId: '1d1ddeb6fc217856443baa7ad6cf5091',
-    version: '1',
+    projectId: '31c109acf7ef70ff25d24c9a656a1d19',
+    version: '2',
     appName: 'web3Modal',
     chains,
   }),
@@ -54,7 +54,7 @@ function App() {
         </Width>
       </WagmiConfig>
 
-      <Web3Modal projectId="1d1ddeb6fc217856443baa7ad6cf5091" ethereumClient={ethereumClient} />
+      <Web3Modal projectId="31c109acf7ef70ff25d24c9a656a1d19" ethereumClient={ethereumClient} />
     </>
   )
 }
